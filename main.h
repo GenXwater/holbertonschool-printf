@@ -16,7 +16,7 @@ typedef struct printer
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-int print_typeformats(const char spec, va_list args);
+int print_typeformats(const char spec, va_list ap);
 
 int _char(va_list ch);
 int _string(va_list str);
