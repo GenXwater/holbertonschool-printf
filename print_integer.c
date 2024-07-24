@@ -5,6 +5,7 @@
  *
  * @intg_nb: an integer or number input
  *
+ *Return: return 1 if success
  */
 int print_integer(va_list intg)
 {

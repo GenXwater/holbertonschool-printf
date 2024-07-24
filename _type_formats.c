@@ -12,7 +12,6 @@
  * Return : return 0 if specifier corresponding function is called successfully
  * or return 1 if no specifier function matches
  */
-
 int print_typeformats(const char spec, va_list args)
 {
 	type_t type_spec[] = {
