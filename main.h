@@ -18,10 +18,10 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int print_typeformats(const char spec, va_list args);
 
-int _char(va_list ch);
-int _string(va_list str);
-int _integer(va_list intg);// integre number %d sera avec %i
-int _percent(va_list pct);
+int print_char(va_list ch);
+int print_string(va_list str);
+int print_integer(va_list intg);// integre number %d sera avec %i
+int print_percent(va_list pct);
 
 
 #endif
