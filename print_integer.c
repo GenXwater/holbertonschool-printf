@@ -1,12 +1,12 @@
 #include"main.h"
 #include<stdarg.h>
 /**
- * print_integer - function that prints an integer
+ * print_integer_number - function that prints an integer
  *
- * @intg: an integer input
+ * @intg_nb: an integer or number input
  *
  */
-void print_integer(va_list intg)
+int print_integer(va_list intg)
 {
 	int nb = va_arg(intg, int);
 
@@ -14,10 +14,11 @@ void print_integer(va_list intg)
 	{
 		_putchar('-');
 	}
-	for (nb = '0', nb <= '9'; nb++)
+	for (nb = '0'; nb <= '9'; nb++)
 	{
 		_putchar(nb);
 	}
 	_putchar('\n');
+	return (1);
 }
 
