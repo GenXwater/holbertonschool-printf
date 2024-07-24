@@ -5,9 +5,9 @@
  *
  * @pct: percentage input
  *
- * Return: return 1 - return one character and succeed
+ * Return: return 1 if succeed
  */
-int print_percent(va_list pct)
+int  print_percent(va_list pct)
 {
 	(void)pct;
 	_putchar('%');
