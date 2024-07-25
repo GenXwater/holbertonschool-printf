@@ -30,9 +30,9 @@ int print_typeformats(const char spec, va_list args)
 		if (type_spec[i].format == spec)
 		{
 			type_spec[i].f(args);
-			return (0);
+			return (1);
 		}
 		i++;
 	}
-	return (1);
+	return (0);
 }
