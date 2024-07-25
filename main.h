@@ -20,7 +20,7 @@ int print_typeformats(const char spec, va_list args);
 
 int print_char(va_list ch);
 int print_string(va_list str);
-int print_integer(va_list intg);
+int print_integer(va_list args);
 int print_percent(va_list pct);
 
 #endif
