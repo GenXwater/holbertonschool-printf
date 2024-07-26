@@ -42,7 +42,15 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 Here are some examples of using the `_printf` function:
 ```c
 #include "main.h"
-
+/**
+* main - Entry point of the program
+*
+* This function demonstrates the usage of the custom _printf function by
+* printing various types of formatted strings including integers, characters,
+* strings, and a percentage sign.
+*
+* Return: Always return 0 (Success)
+*/
 int main(void)
 {
     int len;
