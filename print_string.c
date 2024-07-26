@@ -17,12 +17,12 @@ int print_string(va_list str)
 	s = va_arg(str, char *);
 
 	if (s == NULL)
-		s == "(null)";
+		s = "(null)";
 
 	while (*s != '\0')
 	{
 		_putchar(*s);
 		s++;
 	}
-	return (s - va_arg(str, char *)); /** substitute count */
+	return (s - va_arg(str, char *));
 }
