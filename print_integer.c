@@ -18,6 +18,7 @@ int print_integer(va_list intg)
 	{
 		_putchar('-');
 		nb = -nb;
+		count++;
 	}
 	while (nb / divisor >= 10)
 	{
