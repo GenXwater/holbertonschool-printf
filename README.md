@@ -1,4 +1,3 @@
-```markdown
 # Projet _printf
 
 Ce projet est une implémentation personnalisée de la fonction `printf` en langage C. Il permet d'afficher des chaînes de caractères formatées sur la sortie standard.
