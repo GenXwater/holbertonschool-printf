@@ -9,7 +9,11 @@ SYNOPSIS
 
 
 DESCRIPTION
-	The _printf function is a custom implementation of the standard printf function. It allows you to print formatted output to the standard output stream. The function takes a format string and a variable number of arguments, and prints the formatted output according to the format specifiers in the format string.
+	The _printf function is a custom implementation of the standard printf function.
+	It allows you to print formatted output to the standard output stream.
+	The function takes a format string and a variable number of arguments,
+	and prints the formatted output according to the format specifiers in the
+	format string.
 
 
 RETURN VALUE
@@ -17,7 +21,9 @@ RETURN VALUE
 
 
 FORMAT SPECIFIERS
-	The format string contains zero or more directives, each of which causes the function to fetch zero or more arguments. Each directive consists of a % character followed by a format specifier. The supported format specifiers are:
+	The format string contains zero or more directives, each of which causes
+	the function to fetch zero or more arguments. Each directive consists of a % character
+	followed by a format specifier. The supported format specifiers are:
 
 	%c : Prints a single character.
 	%s : Prints a string of characters.
@@ -70,4 +76,5 @@ AUTHOR
 
 
 REPORTING BUGS
-	If you find any bugs, please report them to 9315@holbertonstudents.com or 8713@holbertonstudents.com
+	If you find any bugs,
+	please report them to 9315@holbertonstudents.com or 8713@holbertonstudents.com
