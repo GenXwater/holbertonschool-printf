@@ -32,11 +32,17 @@ To compile the program, use the following command:
 ```sh
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 ```
+The output file generated will be named "a.out"
 
 ## Prerequisites
 - Ubuntu 20.04 or a more recent version
 - GCC (GNU Compiler Collection)
+  Version used : gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04)
+  see (https://gcc.gnu.org/onlinedocs) for manual
 - Git
+- Betty doc & style guide 
+  set of guidelines for writing clean, readable, and maintainable code:
+  see (https://github.com/alx-tools/Betty/blob/master/README.md) for more informations
 
 ## Usage Examples
 Here are some examples of using the `_printf` function:
@@ -83,6 +89,5 @@ We also performed manual tests to ensure the output of the `_printf` function ma
 
 
 ## Flowchart
-Custom printf Flowchart showing general behaviour of the _printf with the most important functions
 ![__printf_general_flowchart drawio ](https://github.com/user-attachments/assets/ebc4fe0f-40ac-41ee-98fa-3c5faeb0e582)
 
