@@ -24,6 +24,7 @@ int print_typeformats(const char spec, va_list args)
 	};
 
 	int i = 0;
+
 	while (type_spec[i].format)
 	{
 		if (type_spec[i].format == spec)
