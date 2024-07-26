@@ -1,43 +1,44 @@
-# Projet _printf
+# Project _printf
+This project is a custom implementation of the `printf` function in the C language. It allows displaying formatted strings on the standard output.
 
-Ce projet est une implémentation personnalisée de la fonction `printf` en langage C. Il permet d'afficher des chaînes de caractères formatées sur la sortie standard.
-
-## Table des matières
-
+## Table of Contents
 - [Introduction](#introduction)
-- [Description du projet et de la fonction `printf`](#description-du-projet-et-de-la-fonction-printf)
-- [Commande de compilation](#commande-de-compilation)
-- [Prérequis](#prérequis)
-- [Exemples d'utilisation](#exemples-dutilisation)
-- [Man Page](#man-page)
+- [Project and `printf` Function Description](#project-and-printf-function-description)
+- [Compilation Command](#compilation-command)
+- [Prerequisites](#prerequisites)
+- [Usage Examples](#usage-examples)
 - [Testing](#testing)
 
 ## Introduction
+This project aims to recreate the `printf` function from the C standard library. It supports multiple format specifiers and allows displaying formatted strings.
 
-Ce projet vise à recréer la fonction `printf` de la bibliothèque standard C. Il prend en charge plusieurs spécificateurs de format et permet d'afficher des chaînes de caractères formatées.
+## Project and `printf` Function Description
+The goal of this project is to create a custom version of the `printf` function in the C language. The `printf` function allows displaying formatted strings on the standard output. It takes a format string and a variable number of arguments, and outputs the formatted string according to the format specifiers present in the format string.
 
-## Description du projet et de la fonction `printf`
+### Format Specifiers
+The following table describes each format specifier supported by our custom `printf` function:
 
-Le but de ce projet est de créer une version personnalisée de la fonction `printf` en langage C. La fonction `printf` permet d'afficher des chaînes de caractères formatées sur la sortie standard. Elle prend une chaîne de format et un nombre variable d'arguments, et affiche la sortie formatée selon les spécificateurs de format présents dans la chaîne de format.
+| Specifier | Description                       | Example                      |
+|-----------|-----------------------------------|------------------------------|
+| `%c`      | Character                         | `_printf("Character: %c", 'A');` |
+| `%s`      | String                            | `_printf("String: %s", "Hello");` |
+| `%d`      | Decimal integer                   | `_printf("Integer: %d", 123);` |
+| `%i`      | Integer (same as %d)              | `_printf("Integer: %i", 123);` |
+| `%%`      | Literal % character               | `_printf("Percent: %%");`     |
 
-## Commande de compilation
-
-Pour compiler le programme, utilisez la commande suivante :
-
+## Compilation Command
+To compile the program, use the following command:
 ```sh
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o _printf
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 ```
 
-## Prérequis
-
-- Ubuntu 20.04 ou une version plus récente
+## Prerequisites
+- Ubuntu 20.04 or a more recent version
 - GCC (GNU Compiler Collection)
 - Git
 
-## Exemples d'utilisation
-
-Voici quelques exemples d'utilisation de la fonction `_printf` :
-
+## Usage Examples
+Here are some examples of using the `_printf` function:
 ```c
 #include "main.h"
 
@@ -46,30 +47,27 @@ int main(void)
     int len;
     int number = 2;
     char character = 'C';
-    char *string = "péripatéticienne";
+    char *string = "peripatetic";
 
-    // Afficher une phrase avec un nombre
-    len = _printf("Il y a %d péripatéticiennes dans mon jardin.\n", number);
+    // Display a sentence with a number
+    len = _printf("There are %d peripatetics in my garden.\n", number);
 
-    // Afficher une phrase avec un caractère
-    len = _printf("La première lettre de mon prénom est %c.\n", character);
+    // Display a sentence with a character
+    len = _printf("The first letter of my name is %c.\n", character);
 
-    // Afficher une phrase avec une chaîne de caractères
-    len = _printf("J'ai vu une %s dans la forêt.\n", string);
+    // Display a sentence with a string
+    len = _printf("I saw a %s in the forest.\n", string);
 
-    // Afficher une phrase avec un pourcentage
-    len = _printf("Le symbole pour cent est %%.\n");
+    // Display a sentence with a percentage symbol
+    len = _printf("The percent symbol is %%.\n");
 
     return (0);
 }
 ```
 
 ## Testing
-
-Pour tester le code, nous avons utilisé Valgrind pour vérifier les fuites de mémoire et les erreurs de segmentation. Voici la commande utilisée pour tester avec Valgrind :
-
+To test the code, we used Valgrind to check for memory leaks and segmentation faults. Here is the command used to test with Valgrind:
 ```sh
-valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose --log-file=valgrind-out.txt ./_printf
+valgrind ./a.out
 ```
-
-Nous avons également effectué des tests manuels pour vérifier que la sortie de la fonction `_printf` correspondait aux attentes.
+We also performed manual tests to ensure the output of the `_printf` function matched expectations.
