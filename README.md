@@ -8,6 +8,7 @@ This project is a custom implementation of the `printf` function in the C langua
 - [Prerequisites](#prerequisites)
 - [Usage Examples](#usage-examples)
 - [Testing](#testing)
+- [Flowchart](#flowchart)
 
 ## Introduction
 This project aims to recreate the `printf` function from the C standard library. It supports multiple format specifiers and allows displaying formatted strings.
@@ -71,3 +72,7 @@ To test the code, we used Valgrind to check for memory leaks and segmentation fa
 valgrind ./a.out
 ```
 We also performed manual tests to ensure the output of the `_printf` function matched expectations.
+
+
+## Flowchart
+![_printf general flowchart](https://github.com/GenXwater/holbertonschool-printf/blob/a8c0e5b10f05a7d2da550e3ef2c2ae795893fee4/%20_printf_general_flowchart.drawio)
