@@ -1,0 +1,65 @@
+NAME
+_printf - Custom printf function
+
+
+SYNOPSIS
+
+#include "main.h"
+int _printf(const char *format, ...);
+
+
+DESCRIPTION
+The _printf function is a custom implementation of the standard printf function. It allows you to print formatted output to the standard output stream. The function takes a format string and a variable number of arguments, and prints the formatted output according to the format specifiers in the format string.
+
+
+RETURN VALUE
+The _printf function returns the number of characters printed.
+
+
+FORMAT SPECIFIERS
+The format string contains zero or more directives, each of which causes the function to fetch zero or more arguments. Each directive consists of a % character followed by a format specifier. The supported format specifiers are:
+
+%c : Prints a single character.
+%s : Prints a string of characters.
+%d : Prints a decimal (base 10) number.
+%i : Prints an integer (base 10) number.
+%% : Prints a literal % character.
+
+
+EXAMPLES
+
+#include "main.h"
+
+int main(void)
+{
+    int len;
+    int number = 2;
+    char character = 'C';
+    char *string = "péripatéticienne";
+
+    /** Print a sentence with a number */
+    len = _printf("Il y a %d péripatéticiennes dans mon jardin.\n", number);
+
+    /** Print a sentence with a character */
+    len = _printf("La première lettre de mon prénom est %c.\n", character);
+
+    /** Print a sentence with a string */
+    len = _printf("J'ai vu une %s dans la forêt.\n", string);
+
+    /** Print a sentence with a percentage sign */
+    len = _printf("Le symbole pour cent est %%.\n");
+
+    return (0);
+}
+
+
+SEE ALSO
+printf(3)
+
+
+AUTHOR
+Written by Nicolas Martinez & Louis Genty
+
+
+REPORTING BUGS
+If you find any bugs, please report them to 9314@holbertonstudents.com or 8713@holbertonstudents.com
