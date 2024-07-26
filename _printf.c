@@ -1,9 +1,14 @@
 #include "main.h"
 
 /**
- * _printf - Print a caracters of strings
- * @format: string of format
- * Return: numbers of caracters prints, or -1 if error
+ * _printf - Printf main function using variadic
+ * that prints a user defined variable.
+ *
+ * @format: format string
+ * @...: arguments that have to be printed, suspension
+ * points stand for variadic use.
+ *
+ * Return: returns the number of characters printed, or NULL if error
  */
 
 int _printf(const char *format, ...)

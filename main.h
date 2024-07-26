@@ -5,7 +5,14 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
-
+/**
+ *struct printer - Structure that manages format
+ *specifers and corresponding functions
+ *
+ *@format: format specifier
+ *@f: function pointer to corresponding function
+ *
+ */
 typedef struct printer
 {
 	char format;

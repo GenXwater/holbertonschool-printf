@@ -9,8 +9,8 @@
  * @spec: format specifier
  * @args: argument of the variadic function
  *
- * Return : return 0 if specifier corresponding function is called successfully
- * or return 1 if no specifier function matches
+ * Return: Return 1 if specifier corresponding function is called successfully
+ * or return 0 if no specifier function matches
  */
 int print_typeformats(const char spec, va_list args)
 {
@@ -24,7 +24,6 @@ int print_typeformats(const char spec, va_list args)
 	};
 
 	int i = 0;
-
 	while (type_spec[i].format)
 	{
 		if (type_spec[i].format == spec)

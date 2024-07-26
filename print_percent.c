@@ -1,11 +1,14 @@
 #include"main.h"
 #include<stdarg.h>
 /**
- * print_percent - print percentage
+ * print_percent - va_list linked function that prints a percentage sign
  *
- * @pct: percentage input
+ * @pct: percentage type, argument inputed in the function
+ * representing the percentage to print in va_list
  *
- * Return: return 1 if succeed
+ * (void)pct > handle compiler warning when unused variable
+ *
+ * Return: returns 1 if it succees
  */
 int  print_percent(va_list pct)
 {
