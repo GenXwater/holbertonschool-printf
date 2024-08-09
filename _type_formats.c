@@ -7,7 +7,6 @@
  * the variadic arguments.
  *
  * @spec: format specifier
- * @args: argument of the variadic function
  *
  * Return: Return 1 if specifier corresponding function is called successfully
  * or return 0 if no specifier function matches
