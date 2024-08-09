@@ -12,7 +12,7 @@
  * Return: Return 1 if specifier corresponding function is called successfully
  * or return 0 if no specifier function matches
  */
-int print_typeformats(const char spec, va_list args)
+int (*print_typeformats(char spec))(va_list)
 {
 	type_t type_spec[] = {
 		{'c', print_char},
@@ -25,14 +25,17 @@ int print_typeformats(const char spec, va_list args)
 
 	int i = 0;
 
-	while (type_spec[i].format)
+	while (type_spec[i].format != '\0')
 	{
-		if (type_spec[i].format == spec)
+		if (spec == type_spec[i].format)
 		{
-			type_spec[i].f(args);
-			return (1);
+			return (type_spec[i].f);
 		}
 		i++;
 	}
+
+	_putchar('%');
+	_putchar(spec);
+
 	return (0);
 }

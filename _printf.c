@@ -1,45 +1,50 @@
 #include "main.h"
+#include <stdarg.h>
+#include <stdio.h>
 
 /**
- * _printf - Printf main function using variadic
- * that prints a user defined variable.
- *
- * @format: format string
- * @...: arguments that have to be printed, suspension
- * points stand for variadic use.
- *
- * Return: returns the number of characters printed, or NULL if error
+ * _printf - function that prints with the good format
+ * @format: pointer to the string
+ * Return: the number of caracters
  */
 
 int _printf(const char *format, ...)
 {
+	int i = 0, count = 0;
 	va_list args;
-	int count = 0;
-	int x;
+	int (*f)(va_list);
+
+	if (format == NULL)
+		return (-1);
 
 	va_start(args, format);
 
-	while (*format != '\0')
+	while (format[i] != '\0' && format != NULL)
 	{
-		if (*format == '%')
+		if (format[i] == '%')
 		{
-			format++;
-			x = count;
-			count += print_typeformats(*format, args);
-			if (x == count)
+			i++;
+			if (format[i] == '\0')
+				return (-1);
+
+			f = print_typeformats(format[i]);
+
+			if (f != NULL)
 			{
-				_putchar('%');
-				count += _putchar(*format);
+				count = count + f(args);
+			}
+			else
+			{
+				count = count + 2;
 			}
 		}
 		else
 		{
-			count += _putchar(*format);
+			_putchar(format[i]);
+			count++;
 		}
-		format++;
+		i++;
 	}
-
 	va_end(args);
-
 	return (count);
 }
