@@ -12,21 +12,26 @@ int print_integer(va_list intg)
 {
 	int nb = va_arg(intg, int);
 	int count = 0;
+	unsigned int num;
 	int divisor = 1;
 
 	if (nb < 0)
 	{
 		_putchar('-');
-		nb = -nb;
+		num = -nb;
 		count++;
 	}
-	while (nb / divisor >= 10)
+	else
+	{
+		num = nb;
+	}
+	while (num / divisor >= 10)
 	{
 		divisor *= 10;
 	}
 	while (divisor > 0)
 	{
-		_putchar((nb / divisor) % 10 + '0');
+		_putchar((num / divisor) % 10 + '0');
 		count++;
 		divisor /= 10;
 	}
