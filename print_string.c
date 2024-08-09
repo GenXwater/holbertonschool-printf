@@ -13,6 +13,7 @@
 int print_string(va_list str)
 {
 	char *s;
+	int count = 0;
 
 	s = va_arg(str, char *);
 
@@ -23,6 +24,7 @@ int print_string(va_list str)
 	{
 		_putchar(*s);
 		s++;
+		count++;
 	}
-	return (s - va_arg(str, char *));
+	return (count);
 }
